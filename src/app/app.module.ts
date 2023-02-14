@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BanerComponent } from './components/baner/baner.component';
@@ -14,6 +13,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ResponsiveDirective } from './components/directives/responsive.directive';
 import { ServicesComponent } from './components/services/services.component';
 import { InformationModalComponent } from './components/information-modal/information-modal.component';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { InformationModalComponent } from './components/information-modal/inform
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatDialogModule,
+    MaterialModule,
     AppRoutingModule
   ],
   providers: [],

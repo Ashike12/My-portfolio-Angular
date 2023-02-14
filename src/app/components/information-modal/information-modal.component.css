@@ -1,0 +1,12 @@
+.information-modal img {
+  width: 100% !important;
+}
+
+.company-image {
+  position: relative;
+}
+
+.company-image mat-icon {
+  position: absolute;
+  right: 0px;
+}

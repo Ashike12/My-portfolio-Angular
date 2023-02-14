@@ -1,36 +1,37 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 :root {
-  --green: #69F0AE;
-  --green-light: #B9F6CA;
+  --green: #f3f7f5;
+  --green-light: #ccb9cf;
   --gray-light: #BDBDBD;
-  --dark-gray: #4f6f7e;
-  --black: #2f623d;
+  --dark-gray: #363a3c;
+  --black: #59605d;
 }
 
 * {
-    margin: 0%;
-    box-sizing: border-box;
+  margin: 0%;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
 }
 
 .container {
-    margin: 0 auto;
-    max-width: 1500px;
-    outline: 0px solid white;
+  margin: 0 auto;
+  max-width: 1500px;
+  outline: 0px solid white;
 }
 
 h1 {
-    padding: 1rem 0;
-    text-align: center;
-    letter-spacing: 1px;
-    color: var(--green);
-    outline: 1px solid white;
-    font-family: 'Roboto Condensed', sans-serif;
+  padding: 1rem 0;
+  text-align: center;
+  letter-spacing: 1px;
+  color: var(--green);
+  outline: 1px solid white;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .hover-effect:hover {
@@ -39,5 +40,24 @@ h1 {
 }
 
 .green-color {
-  color: #69F0AE;
+  color: lightblue;
+}
+
+.primary-text-color {
+  color: #363a3c;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px !important;
+}
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

@@ -5,13 +5,6 @@ export interface Education {
   score: string;
 }
 
-export interface WorkExperience {
-  role: string;
-  company: string;
-  duration: string;
-  description: string[];
-}
-
 export interface Skill {
   name: string;
   level: string;
@@ -29,6 +22,13 @@ export interface Service {
   description: string[];
 }
 
-export interface IInformationModalConfig {
-
+export interface IWorkExperience {
+  title: string;
+  subTitle?: string;
+  duration?: string;
+  technologies?: string[];
+  technicalTools?: string[];
+  responsibilities?: string[];
+  projects?: any[];
+  description: string[];
 }

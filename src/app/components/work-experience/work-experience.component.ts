@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from './../../services/common-service';
-import { IInformationModalConfig, WorkExperience } from '../../models/models';
+import { IWorkExperience } from '../../models/models';
 
 @Component({
   selector: 'work-experience',
@@ -8,10 +8,10 @@ import { IInformationModalConfig, WorkExperience } from '../../models/models';
   styleUrls: ['./work-experience.component.css'],
 })
 export class WorkExperienceComponent implements OnInit {
-  workExpList: WorkExperience[] = [
+  workExpList: IWorkExperience[] = [
     {
-      role: 'Software Engineer',
-      company: 'Selise Digital Platform',
+      title: 'Selise Digital Platform',
+      subTitle: 'Software Engineer',
       duration: 'November 2019 - Now',
       description: [
         'Develop the crm System',
@@ -20,17 +20,27 @@ export class WorkExperienceComponent implements OnInit {
       ],
     },
     {
-      role: 'Junior Software Engineer',
-      company: 'Secure Link Service',
-      duration: 'February 2018 - October 2019',
+      title: 'Selise Rockin Software',
+      subTitle: 'Junior Software Engineer',
+      duration: 'From november 2018 to October 2019',
+      technologies: ['AngularJs, Angular 8/8+, Angular Material, mongoDB, Nodejs, Dotnet, C#, Javascript, Html5, Css3, Typescript'],
+      technicalTools: ['Github, Bitbucket, Robo3t, Postman, sourcetree'],
+      responsibilities: [
+      'Working as a Frontend team member on agile development team focused on software delivery and manage backend services for form management.',
+       `Assisting the team in maintaining existing Project, tools and workflows necessary to facilitate the process. Designing, Building & Maintaining new module
+       on requirement as a team member & Developing user friendly software.`],
+       projects: [{
+
+       }],
       description: [
-        'Involved in various Kind of Bug fixing',
-        'Banking KYC Forms and all kind of forms Management'
-      ],
+        'Develop the crm System',
+        'Form Builder to manage forms',
+        'UniqId that supports almost 1000 billon numbers'
+      ]
     },
     {
-      role: 'Problem Solver',
-      company: 'As a passion',
+      title: 'As a passion',
+      subTitle: 'Problem Solver',
       duration: '2013 - Now',
       description: [
         'Leetcode,https://leetcode.com/AshikeRN/, - solved 200+ problems',
@@ -48,10 +58,7 @@ export class WorkExperienceComponent implements OnInit {
   goToSite(address: string) {
     window.open(address);
   }
-  openWorkDetails() {
-    const config: IInformationModalConfig = {
-
-    }
+  openWorkDetails(config: IWorkExperience) {
     this.commonService.openInformationModal(config)
   }
 }

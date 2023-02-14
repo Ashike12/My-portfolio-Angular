@@ -1,8 +1,28 @@
-<h1 mat-dialog-title>Delete file</h1>
-<div mat-dialog-content>
-  Would you like to delete cat.jpeg?
-</div>
-<div mat-dialog-actions>
-  <button mat-button mat-dialog-close>No</button>
-  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+<div class="information-modal">
+  <div class="company-image">
+    <img src="./../../../assets/Selise.jpg" alt="">
+    <mat-icon class="cursor-pointer" mat-dialog-close>close</mat-icon>
+  </div>
+  <h1 cdkFocusInitial class="primary-text-color">{{data?.title}}</h1>
+  <h2 *ngIf="data?.subTitle" class="primary-text-color text-center">{{data?.subTitle}}</h2>
+  <p *ngIf="data?.subTitle" class="primary-text-color text-center">{{data?.duration}}</p>
+  <div class="mt-20 dialog-content" mat-dialog-content>
+    <div *ngIf="data?.technologies">
+      <h4 class="text-center">Technology used</h4>
+      <p class="mt-8 text-center">{{data?.technologies?.join(',')}}</p>
+    </div>
+    <div class="mt-8" *ngIf="data?.technicalTools">
+      <h4 class="text-center">Technical tools used</h4>
+      <p class="mt-8 text-center">{{data?.technicalTools?.join(',')}}</p>
+    </div>
+    <div class="mt-8" *ngIf="data?.responsibilities">
+      <h4 class="text-center">Key Responsibilities</h4>
+      <ul>
+        <li *ngFor="let data of data.responsibilities">{{data}}</li>
+      </ul>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+  </div>
 </div>

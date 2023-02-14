@@ -2,16 +2,16 @@
   <h1>Work Experience</h1>
 
   <ul>
-    <li *ngFor="let workexp of workExpList">
-      <h2>{{workexp.role}}</h2>
-      <h3>{{workexp.company}}</h3>
-      <h4>{{workexp.duration}}</h4>
+    <li *ngFor="let workExp of workExpList">
+      <h2>{{workExp.subTitle}}</h2>
+      <h3>{{workExp.title}}</h3>
+      <h4>{{workExp.duration}}</h4>
       <ul>
-        <li *ngFor="let desc of workexp.description">
-          <p *ngIf="workexp.role!='Problem Solver'">{{desc}}</p>
-          <p class="hover-effect" (click)="goToSite(desc.split(',')[1])" *ngIf="workexp.role=='Problem Solver'">{{desc.split(',')[0]}}{{desc.split(',')[2]}}</p>
+        <li *ngFor="let desc of workExp.description">
+          <p *ngIf="workExp.subTitle!='Problem Solver'">{{desc}}</p>
+          <p class="hover-effect" (click)="goToSite(desc.split(',')[1])" *ngIf="workExp.subTitle=='Problem Solver'">{{desc.split(',')[0]}}{{desc.split(',')[2]}}</p>
         </li>
-        <li (click)="openWorkDetails()" class="hover-effect green-color"><p>More details</p></li>
+        <li *ngIf="workExp.subTitle!='Problem Solver'" (click)="openWorkDetails(workExp)" class="hover-effect green-color"><p>More details</p></li>
       </ul>
     </li>
   </ul>
