@@ -3,17 +3,17 @@
     <img src="./../../../assets/Selise.jpg" alt="">
     <mat-icon class="cursor-pointer" mat-dialog-close>close</mat-icon>
   </div>
-  <h1 cdkFocusInitial class="primary-text-color">{{data?.title}}</h1>
-  <h2 *ngIf="data?.subTitle" class="primary-text-color text-center">{{data?.subTitle}}</h2>
-  <p *ngIf="data?.subTitle" class="primary-text-color text-center">{{data?.duration}}</p>
+  <h1 cdkFocusInitial class="primary-text-color">{{data.title}}</h1>
+  <h2 *ngIf="data?.subTitle" class="primary-text-color text-center">{{data.subTitle}}</h2>
+  <p *ngIf="data?.subTitle" class="primary-text-color text-center">{{data.duration}}</p>
   <div class="mt-20 dialog-content" mat-dialog-content>
     <div *ngIf="data?.technologies">
       <h4 class="text-center">Technology used</h4>
-      <p class="mt-8 text-center">{{data?.technologies?.join(',')}}</p>
+      <p class="mt-8 text-center">{{data.technologies?.join(',')}}</p>
     </div>
     <div class="mt-8" *ngIf="data?.technicalTools">
       <h4 class="text-center">Technical tools used</h4>
-      <p class="mt-8 text-center">{{data?.technicalTools?.join(',')}}</p>
+      <p class="mt-8 text-center">{{data.technicalTools?.join(',')}}</p>
     </div>
     <div class="mt-8" *ngIf="data?.responsibilities">
       <h4 class="text-center">Key Responsibilities</h4>
